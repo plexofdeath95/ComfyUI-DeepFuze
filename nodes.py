@@ -851,7 +851,8 @@ class DeepFuzeFaceSwap:
 			str(face_mask_padding_bottom),
 			str(face_mask_padding_left),
 			str(face_mask_padding_right),
-            '--headless'
+            '--headless',
+            '--skip-download'
         ]
             
 
@@ -880,7 +881,8 @@ class DeepFuzeFaceSwap:
                 faceswap_filename,
                 '-o',
                 faceswap_filename,
-                '--headless'
+                '--headless',
+                '--skip-download'
             ]
             if device=="cuda":
                 command.extend(['--execution-providers',"cuda"])
@@ -904,7 +906,8 @@ class DeepFuzeFaceSwap:
                 faceswap_filename,
                 '-o',
                 faceswap_filename,
-                '--headless'
+                '--headless',
+                '--skip-download'
             ]
             print(command)
             if device=="cuda":
@@ -1289,6 +1292,7 @@ class DeepFuzeAdavance:
                 '-o',
                 enhanced_filename,
                 '--headless'
+                '--skip-download'
             ]
             if device=="cuda":
                 command.extend(['--execution-providers',"cuda"])
@@ -1313,7 +1317,8 @@ class DeepFuzeAdavance:
                 filename,
                 '-o',
                 enhanced_filename,
-                '--headless'
+                '--headless',
+                '--skip-download'
             ]
             print(command)
             if device=="cuda":
